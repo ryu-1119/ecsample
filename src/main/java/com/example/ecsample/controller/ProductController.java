@@ -40,6 +40,7 @@ public class ProductController {
 		model.addAttribute("product", product);
 		return "product/detail";
 	}
+	aaaa
 
 	//	@GetMapping("/product/{id}")
 	//	public String productDetail(
