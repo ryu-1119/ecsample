@@ -20,9 +20,9 @@ public class ProductController {
 	public String showList(Model model) {
 		//商品一覧ページを表示する
 		List<Product> products = Arrays.asList(
-				new Product(1, "コーヒーカップ", 1200, 10),
-				new Product(2, "ティーポット", 2400, 0),
-				new Product(3, "マグカップ", 1500, 12));
+				new Product(1, "コーヒーカップ", 1200),
+				new Product(2, "ティーポット", 2400),
+				new Product(3, "マグカップ", 1500));
 		model.addAttribute("products", products);
 		return "product/list";
 	}
@@ -31,11 +31,11 @@ public class ProductController {
 	public String showDetail(@PathVariable("id") int id, Model model) {
 		Product product;
 		if (id == 1) {
-			product = new Product(1, "コーヒーカップ", 1200, 10);
+			product = new Product(1, "コーヒーカップ", 1200);
 		} else if (id == 2) {
-			product = new Product(2, "ティーポット", 2400, 0);
+			product = new Product(2, "ティーポット", 2400);
 		} else {
-			product = new Product(0, "未登録の商品", 0, 0);
+			product = new Product(0, "未登録の商品", 0);
 		}
 		model.addAttribute("product", product);
 		return "product/detail";
