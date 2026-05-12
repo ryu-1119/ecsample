@@ -10,6 +10,7 @@
     FROM products
     ORDER BY id
   </select>
+  <!-- This is a test comment -->
 
   <select id="findById" resultType="com.example.ecsample.entity.Product">
     SELECT id, name, price
